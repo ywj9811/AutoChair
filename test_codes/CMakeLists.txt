@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0)
+project(camera_calibration)
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+add_executable(${PROJECT_NAME} image_capture_program.cpp)
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
